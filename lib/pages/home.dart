@@ -8,6 +8,21 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  List<Map<String, dynamic>> arrCategories = [
+    {'img': "assets/images/tower.png", 'name': "Place"},
+    //
+    {'img': "assets/images/animal.png", 'name': "Animal"},
+    //
+    {'img': "assets/images/fruits.png", 'name': "Fruit"},
+    //
+    {'img': "assets/images/object.png", 'name': "Object"},
+    //
+    {'img': "assets/images/sports.png", 'name': "Sports"},
+    //
+    {'img': "assets/images/random.png", 'name': "Random"},
+    //
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,7 +55,7 @@ class _HomeState extends State<Home> {
                           fit: BoxFit.cover,
                         ),
                       ),
-                      const SizedBox(width: 40),
+                      const SizedBox(width: 20),
                       const Padding(
                         padding: EdgeInsets.only(top: 10),
                         child: Text(
@@ -112,24 +127,59 @@ class _HomeState extends State<Home> {
                 style: TextStyle(
                     fontSize: 23,
                     color: Colors.black,
-                    fontWeight: FontWeight.bold),
+                    fontWeight: FontWeight.w900),
               ),
             ),
             const SizedBox(height: 20),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                ClipRRect(
-                  borderRadius: BorderRadius.circular(10),
-                  child: Image.asset(
-                    "assets/images/21004063.jpg",
-                    height: 100,
-                    width: 100,
-                    fit: BoxFit.cover,
-                  ),
+
+            // Grid View Builder
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              child: GridView.builder(
+                shrinkWrap: true,
+                physics: const NeverScrollableScrollPhysics(),
+                itemCount: arrCategories.length,
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2, // Two items per row
+                  crossAxisSpacing: 20,
+                  mainAxisSpacing: 20,
+                  childAspectRatio: 1, // Square grid items
                 ),
-              ],
+                itemBuilder: (context, index) {
+                  final category = arrCategories[index];
+                  return Container(
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(15),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black.withOpacity(0.1),
+                          blurRadius: 10,
+                          spreadRadius: 2,
+                        ),
+                      ],
+                    ),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Image.asset(
+                          category['img'],
+                          height: 80,
+                          width: 80,
+                        ),
+                        const SizedBox(height: 10),
+                        Text(
+                          category['name'],
+                          style: const TextStyle(
+                              fontSize: 18, fontWeight: FontWeight.bold),
+                        ),
+                      ],
+                    ),
+                  );
+                },
+              ),
             ),
+
             const SizedBox(height: 30),
           ],
         ),
