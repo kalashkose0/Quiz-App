@@ -79,19 +79,22 @@ class _HomeState extends State<Home> {
                   padding: const EdgeInsets.all(10),
                   child: Row(
                     children: [
+                      SizedBox(
+                        width: 10,
+                      ),
                       ClipRRect(
                         borderRadius: const BorderRadius.only(
                           topLeft: Radius.circular(20),
                           bottomLeft: Radius.circular(20),
                         ),
                         child: Image.asset(
-                          "assets/images/21004063.jpg",
+                          "assets/images/question-mark.png",
                           height: 120,
                           width: 120,
-                          fit: BoxFit.cover,
+                          fit: BoxFit.cover,  
                         ),
                       ),
-                      const SizedBox(width: 20),
+                      const SizedBox(width: 40),
                       Expanded(
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -140,10 +143,12 @@ class _HomeState extends State<Home> {
                 physics: const NeverScrollableScrollPhysics(),
                 itemCount: arrCategories.length,
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 2, // Two items per row
+                  crossAxisCount: 2, 
+                  // Two items per row
                   crossAxisSpacing: 20,
                   mainAxisSpacing: 20,
-                  childAspectRatio: 1, // Square grid items
+                  childAspectRatio: 1, 
+                  // Square grid items
                 ),
                 itemBuilder: (context, index) {
                   final category = arrCategories[index];
@@ -171,7 +176,9 @@ class _HomeState extends State<Home> {
                         Text(
                           category['name'],
                           style: const TextStyle(
-                              fontSize: 18, fontWeight: FontWeight.bold),
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.black),
                         ),
                       ],
                     ),
