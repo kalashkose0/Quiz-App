@@ -91,7 +91,7 @@ class _HomeState extends State<Home> {
                           "assets/images/question-mark.png",
                           height: 120,
                           width: 120,
-                          fit: BoxFit.cover,  
+                          fit: BoxFit.cover,
                         ),
                       ),
                       const SizedBox(width: 40),
@@ -133,7 +133,7 @@ class _HomeState extends State<Home> {
                     fontWeight: FontWeight.w900),
               ),
             ),
-            const SizedBox(height: 20),
+            // const SizedBox(height: 20),
 
             // Grid View Builder
             Padding(
@@ -143,11 +143,11 @@ class _HomeState extends State<Home> {
                 physics: const NeverScrollableScrollPhysics(),
                 itemCount: arrCategories.length,
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 2, 
+                  crossAxisCount: 2,
                   // Two items per row
                   crossAxisSpacing: 20,
                   mainAxisSpacing: 20,
-                  childAspectRatio: 1, 
+                  childAspectRatio: 1,
                   // Square grid items
                 ),
                 itemBuilder: (context, index) {
@@ -186,7 +186,6 @@ class _HomeState extends State<Home> {
                 },
               ),
             ),
-
             const SizedBox(height: 30),
           ],
         ),
