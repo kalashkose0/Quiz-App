@@ -1,4 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:quiz_app/pages/AnimalPage/AnimalPage.dart';
+// import 'package:quiz_app/pages/CategoryPage.dart';
+import 'package:quiz_app/pages/FruitPage/FruitPage.dart';
+import 'package:quiz_app/pages/ObjectPage/ObjectPage.dart';
+import 'package:quiz_app/pages/PlacePage/PlacePage.dart';
+import 'package:quiz_app/pages/RandomPage/RandomPage.dart';
+import 'package:quiz_app/pages/SportsPage/SportsPage.dart'; // Import the target page
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -10,17 +17,11 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   List<Map<String, dynamic>> arrCategories = [
     {'img': "assets/images/tower.png", 'name': "Place"},
-    //
     {'img': "assets/images/animal.png", 'name': "Animal"},
-    //
     {'img': "assets/images/fruits.png", 'name': "Fruit"},
-    //
     {'img': "assets/images/object.png", 'name': "Object"},
-    //
     {'img': "assets/images/sports.png", 'name': "Sports"},
-    //
     {'img': "assets/images/random.png", 'name': "Random"},
-    //
   ];
 
   @override
@@ -79,9 +80,7 @@ class _HomeState extends State<Home> {
                   padding: const EdgeInsets.all(10),
                   child: Row(
                     children: [
-                      SizedBox(
-                        width: 10,
-                      ),
+                      const SizedBox(width: 10),
                       ClipRRect(
                         borderRadius: const BorderRadius.only(
                           topLeft: Radius.circular(20),
@@ -133,9 +132,6 @@ class _HomeState extends State<Home> {
                     fontWeight: FontWeight.w900),
               ),
             ),
-            // const SizedBox(height: 20),
-
-            // Grid View Builder
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: GridView.builder(
@@ -144,43 +140,81 @@ class _HomeState extends State<Home> {
                 itemCount: arrCategories.length,
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,
-                  // Two items per row
                   crossAxisSpacing: 20,
                   mainAxisSpacing: 20,
                   childAspectRatio: 1,
-                  // Square grid items
                 ),
                 itemBuilder: (context, index) {
                   final category = arrCategories[index];
-                  return Container(
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(15),
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.black.withOpacity(0.1),
-                          blurRadius: 10,
-                          spreadRadius: 2,
-                        ),
-                      ],
-                    ),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Image.asset(
-                          category['img'],
-                          height: 80,
-                          width: 80,
-                        ),
-                        const SizedBox(height: 10),
-                        Text(
-                          category['name'],
-                          style: const TextStyle(
-                              fontSize: 18,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.black),
-                        ),
-                      ],
+                  return GestureDetector(
+                    onTap: () {
+                      Widget? nextPage; // Allow nullability
+
+                      switch (category['name']) {
+                        case "Place":
+                          nextPage = PlacePage();
+                          break;
+                        case "Animal":
+                          nextPage = AnimalPage();
+                          break;
+                        case "Fruit":
+                          nextPage = FruitPage();
+                          break;
+                        case "Object":
+                          nextPage = ObjectPage();
+                          break;
+                        case "Sports":
+                          nextPage = SportsPage();
+                          break;
+                        case "Random":
+                          nextPage = RandomPage();
+                          break;
+                        default:
+                          nextPage = null; // Handle unknown categories
+                      }
+
+                      if (nextPage != null) {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => nextPage!),
+                        );
+                      } else {
+                        // Optional: Show an error message
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          SnackBar(content: Text("Page not found!")),
+                        );
+                      }
+                    },
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(15),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.black.withOpacity(0.1),
+                            blurRadius: 10,
+                            spreadRadius: 2,
+                          ),
+                        ],
+                      ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Image.asset(
+                            category['img'],
+                            height: 80,
+                            width: 80,
+                          ),
+                          const SizedBox(height: 10),
+                          Text(
+                            category['name'],
+                            style: const TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.black),
+                          ),
+                        ],
+                      ),
                     ),
                   );
                 },
