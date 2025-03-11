@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:quiz_app/pages/Question/question.dart';
+import 'package:quiz_app/pages/SportsPage/Sportsquestion.dart';
 import 'package:quiz_app/pages/home.dart';
 
 void main() {
@@ -20,7 +20,6 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       home: Home(),
-      // home: Question(),
     );
   }
 }
