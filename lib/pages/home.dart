@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:quiz_app/pages/AnimalPage/AnimalPage.dart';
+import 'package:quiz_app/pages/AnimalPage/AnimalQuestion.dart';
 // import 'package:quiz_app/pages/CategoryPage.dart';
 import 'package:quiz_app/pages/FruitPage/FruitPage.dart';
 import 'package:quiz_app/pages/ObjectPage/ObjectPage.dart';
 import 'package:quiz_app/pages/PlacePage/PlacePage.dart';
 import 'package:quiz_app/pages/RandomPage/RandomPage.dart';
 import 'package:quiz_app/pages/SportsPage/SportsPage.dart';
-import 'package:quiz_app/pages/SportsPage/Sportsquestion.dart'; // Import the target page
+import 'package:quiz_app/pages/SportsPage/Sportsquestion.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -18,10 +19,15 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   List<Map<String, dynamic>> arrCategories = [
     {'img': "assets/images/tower.png", 'name': "Place"},
+    //
     {'img': "assets/images/animal.png", 'name': "Animal"},
+    //
     {'img': "assets/images/fruits.png", 'name': "Fruit"},
+    //
     {'img': "assets/images/object.png", 'name': "Object"},
+    //
     {'img': "assets/images/sports.png", 'name': "Sports"},
+    //
     {'img': "assets/images/random.png", 'name': "Random"},
   ];
 
@@ -149,20 +155,20 @@ class _HomeState extends State<Home> {
                   final category = arrCategories[index];
                   return GestureDetector(
                     onTap: () {
-                      Widget? nextPage; // Allow nullability
+                      Widget? nextPage;
 
                       switch (category['name']) {
                         case "Place":
                           nextPage = PlacePage();
                           break;
                         case "Animal":
-                          nextPage = AnimalPage();
+                          nextPage = Animalquestion();
                           break;
                         case "Fruit":
                           nextPage = FruitPage();
                           break;
                         case "Object":
-                          nextPage = ObjectPage();
+                          nextPage = PlacePage();
                           break;
                         case "Sports":
                           nextPage = Sportsquestion();
