@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:quiz_app/pages/AnimalPage/AnimalPage.dart';
+// import 'package:quiz_app/pages/AnimalPage/AnimalPage.dart';
 import 'package:quiz_app/pages/AnimalPage/AnimalQuestion.dart';
 // import 'package:quiz_app/pages/CategoryPage.dart';
 import 'package:quiz_app/pages/FruitPage/FruitPage.dart';

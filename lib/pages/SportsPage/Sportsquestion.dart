@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quiz_app/pages/home.dart';
 
 class Sportsquestion extends StatefulWidget {
   const Sportsquestion({super.key});
@@ -21,13 +22,19 @@ class _SportsquestionState extends State<Sportsquestion> {
             ),
             Row(
               children: [
-                CircleAvatar(
-                  backgroundColor: Colors.orange,
-                  radius: 20,
-                  child: Icon(
-                    Icons.chevron_left_sharp,
-                    size: 30,
-                    color: Colors.white,
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => Home()));
+                  },
+                  child: CircleAvatar(
+                    backgroundColor: Colors.orange,
+                    radius: 20,
+                    child: Icon(
+                      Icons.chevron_left_sharp,
+                      size: 30,
+                      color: Colors.white,
+                    ),
                   ),
                 ),
                 SizedBox(
