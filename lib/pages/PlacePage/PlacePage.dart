@@ -29,7 +29,7 @@ class PlacePage extends StatelessWidget {
                   width: 90,
                 ),
                 Text(
-                  "Animal",
+                  "Place",
                   style: TextStyle(
                       fontSize: 25,
                       color: Colors.white,

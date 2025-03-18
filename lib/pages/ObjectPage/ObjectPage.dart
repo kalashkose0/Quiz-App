@@ -29,7 +29,7 @@ class ObjectPage extends StatelessWidget {
                   width: 90,
                 ),
                 Text(
-                  "Animal",
+                  "Objects",
                   style: TextStyle(
                       fontSize: 25,
                       color: Colors.white,
@@ -67,19 +67,19 @@ class ObjectPage extends StatelessWidget {
                       SizedBox(
                         height: 20,
                       ),
-                      OptionBox(text: "Statue"),
+                      OptionBox(text: "Box"),
                       SizedBox(
                         height: 20,
                       ),
-                      OptionBox(text: "Burj Khalifa"),
+                      OptionBox(text: "phone"),
                       SizedBox(
                         height: 20,
                       ),
-                      OptionBox(text: "Tower"),
+                      OptionBox(text: "bottle"),
                       SizedBox(
                         height: 20,
                       ),
-                      OptionBox(text: "Gate"),
+                      OptionBox(text: "cattle"),
                       SizedBox(
                         height: 30,
                       ),
@@ -100,8 +100,6 @@ class ObjectPage extends StatelessWidget {
     );
   }
 }
-
-
 
 class OptionBox extends StatelessWidget {
   final String text;

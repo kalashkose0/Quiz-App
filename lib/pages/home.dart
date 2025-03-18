@@ -6,7 +6,7 @@ import 'package:quiz_app/pages/FruitPage/FruitPage.dart';
 import 'package:quiz_app/pages/ObjectPage/ObjectPage.dart';
 import 'package:quiz_app/pages/PlacePage/PlacePage.dart';
 import 'package:quiz_app/pages/RandomPage/RandomPage.dart';
-import 'package:quiz_app/pages/SportsPage/SportsPage.dart';
+// import 'package:quiz_app/pages/SportsPage/SportsPage.dart';
 import 'package:quiz_app/pages/SportsPage/Sportsquestion.dart';
 
 class Home extends StatefulWidget {

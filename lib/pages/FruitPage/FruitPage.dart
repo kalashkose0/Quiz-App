@@ -29,7 +29,7 @@ class FruitPage extends StatelessWidget {
                   width: 90,
                 ),
                 Text(
-                  "Animal",
+                  "Fruits",
                   style: TextStyle(
                       fontSize: 25,
                       color: Colors.white,
