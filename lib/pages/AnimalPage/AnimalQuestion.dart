@@ -79,7 +79,7 @@ class _AnimalquestionState extends State<Animalquestion> {
                       SizedBox(
                         height: 20,
                       ),
-                      OptionBox(text: "beer"),
+                      OptionBox(text: "bear"),
                       SizedBox(
                         height: 20,
                       ),
