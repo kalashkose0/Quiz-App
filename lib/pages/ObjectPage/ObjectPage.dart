@@ -64,7 +64,7 @@ class ObjectPage extends StatelessWidget {
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(20),
                           child: Image.asset(
-                            "assets/images/tower1.png",
+                            "assets/images/gift-box.png",
                             height: 240,
                             width: MediaQuery.of(context).size.width,
                             fit: BoxFit.cover,

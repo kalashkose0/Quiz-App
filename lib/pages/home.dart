@@ -168,7 +168,7 @@ class _HomeState extends State<Home> {
                           nextPage = FruitPage();
                           break;
                         case "Object":
-                          nextPage = PlacePage();
+                          nextPage = ObjectPage();
                           break;
                         case "Sports":
                           nextPage = Sportsquestion();

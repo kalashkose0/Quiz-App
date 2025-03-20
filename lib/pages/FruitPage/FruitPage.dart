@@ -64,7 +64,7 @@ class FruitPage extends StatelessWidget {
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(20),
                           child: Image.asset(
-                            "assets/images/banana.png",
+                            "assets/images/orange.png",
                             height: 240,
                             width: MediaQuery.of(context).size.width,
                             fit: BoxFit.cover,
