@@ -110,7 +110,7 @@ class ObjectPage extends StatelessWidget {
 
 class OptionBox extends StatelessWidget {
   final String text;
-  const OptionBox({Key? key, required this.text}) : super(key: key);
+  const OptionBox({super.key, required this.text});
 
   @override
   Widget build(BuildContext context) {
