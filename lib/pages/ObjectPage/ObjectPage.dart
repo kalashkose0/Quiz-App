@@ -92,7 +92,7 @@ class ObjectPage extends StatelessWidget {
                       ),
                       ElevatedButton(
                         onPressed: () {
-                          // Add navigation or action here
+                          // Navigation 
                         },
                         child: Text("Next"),
                       ),
