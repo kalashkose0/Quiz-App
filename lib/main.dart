@@ -1,9 +1,13 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:quiz_app/pages/SportsPage/Sportsquestion.dart';
-import 'package:quiz_app/pages/home.dart';
+import 'package:quiz_app/Quizss/SportsPage/Sportsquestion.dart';
+import 'package:quiz_app/Screens/SignupPage.dart';
+import 'package:quiz_app/Screens/home.dart';
 
-void main() {
-  runApp(const MyApp());
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(); // Firebase initialized
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -19,7 +23,8 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: Home(),
+      // home: Home(),
+      home: SignupPage(),
     );
   }
 }

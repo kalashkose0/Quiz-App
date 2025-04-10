@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:quiz_app/pages/home.dart';
+import 'package:quiz_app/Screens/home.dart';
 
 class FruitPage extends StatelessWidget {
   const FruitPage({super.key});

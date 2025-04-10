@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 // import 'package:quiz_app/pages/AnimalPage/AnimalPage.dart';
-import 'package:quiz_app/pages/AnimalPage/AnimalQuestion.dart';
+import 'package:quiz_app/Quizss/AnimalPage/AnimalQuestion.dart';
 // import 'package:quiz_app/pages/CategoryPage.dart';
-import 'package:quiz_app/pages/FruitPage/FruitPage.dart';
-import 'package:quiz_app/pages/ObjectPage/ObjectPage.dart';
-import 'package:quiz_app/pages/PlacePage/PlacePage.dart';
-import 'package:quiz_app/pages/RandomPage/RandomPage.dart';
+import 'package:quiz_app/Quizss/FruitPage/FruitPage.dart';
+import 'package:quiz_app/Quizss/ObjectPage/ObjectPage.dart';
+import 'package:quiz_app/Quizss/PlacePage/PlacePage.dart';
+import 'package:quiz_app/Quizss/RandomPage/RandomPage.dart';
 // import 'package:quiz_app/pages/SportsPage/SportsPage.dart';
-import 'package:quiz_app/pages/SportsPage/Sportsquestion.dart';
+import 'package:quiz_app/Quizss/SportsPage/Sportsquestion.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});

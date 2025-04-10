@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:quiz_app/pages/home.dart';
+import 'package:quiz_app/Screens/home.dart';
 
-class PlacePage extends StatelessWidget {
-  const PlacePage({super.key});
+class Sportsquestion extends StatefulWidget {
+  const Sportsquestion({super.key});
 
+  @override
+  State<Sportsquestion> createState() => _SportsquestionState();
+}
+
+class _SportsquestionState extends State<Sportsquestion> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,7 +24,7 @@ class PlacePage extends StatelessWidget {
               children: [
                 GestureDetector(
                   onTap: () {
-                   Navigator.pop(context);
+                    Navigator.pop(context);
                   },
                   child: CircleAvatar(
                     backgroundColor: Colors.orange,
@@ -35,7 +40,7 @@ class PlacePage extends StatelessWidget {
                   width: 90,
                 ),
                 Text(
-                  "Place",
+                  "Sports",
                   style: TextStyle(
                       fontSize: 25,
                       color: Colors.white,
@@ -63,7 +68,7 @@ class PlacePage extends StatelessWidget {
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(20),
                           child: Image.asset(
-                            "assets/images/burj-khalifa.png",
+                            "assets/images/football.jpg",
                             height: 240,
                             width: MediaQuery.of(context).size.width,
                             fit: BoxFit.cover,
@@ -73,19 +78,19 @@ class PlacePage extends StatelessWidget {
                       SizedBox(
                         height: 20,
                       ),
-                      OptionBox(text: "Statue"),
+                      OptionBox(text: "Volly~Ball"),
                       SizedBox(
                         height: 20,
                       ),
-                      OptionBox(text: "Burj Khalifa"),
+                      OptionBox(text: "Foot~Ball"),
                       SizedBox(
                         height: 20,
                       ),
-                      OptionBox(text: "Tower"),
+                      OptionBox(text: "Table~Ball"),
                       SizedBox(
                         height: 20,
                       ),
-                      OptionBox(text: "Gate"),
+                      OptionBox(text: "Cricket~Ball"),
                       SizedBox(
                         height: 30,
                       ),

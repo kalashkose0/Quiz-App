@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:quiz_app/pages/home.dart';
+import 'package:quiz_app/Screens/home.dart';
 
-class ObjectPage extends StatelessWidget {
-  const ObjectPage({super.key});
+class PlacePage extends StatelessWidget {
+  const PlacePage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +19,7 @@ class ObjectPage extends StatelessWidget {
               children: [
                 GestureDetector(
                   onTap: () {
-                    Navigator.pop(context);
+                   Navigator.pop(context);
                   },
                   child: CircleAvatar(
                     backgroundColor: Colors.orange,
@@ -35,7 +35,7 @@ class ObjectPage extends StatelessWidget {
                   width: 90,
                 ),
                 Text(
-                  "Objects",
+                  "Place",
                   style: TextStyle(
                       fontSize: 25,
                       color: Colors.white,
@@ -63,7 +63,7 @@ class ObjectPage extends StatelessWidget {
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(20),
                           child: Image.asset(
-                            "assets/images/gift-box.png",
+                            "assets/images/burj-khalifa.png",
                             height: 240,
                             width: MediaQuery.of(context).size.width,
                             fit: BoxFit.cover,
@@ -73,25 +73,25 @@ class ObjectPage extends StatelessWidget {
                       SizedBox(
                         height: 20,
                       ),
-                      OptionBox(text: "Box"),
+                      OptionBox(text: "Statue"),
                       SizedBox(
                         height: 20,
                       ),
-                      OptionBox(text: "phone"),
+                      OptionBox(text: "Burj Khalifa"),
                       SizedBox(
                         height: 20,
                       ),
-                      OptionBox(text: "bottle"),
+                      OptionBox(text: "Tower"),
                       SizedBox(
                         height: 20,
                       ),
-                      OptionBox(text: "cattle"),
+                      OptionBox(text: "Gate"),
                       SizedBox(
                         height: 30,
                       ),
                       ElevatedButton(
                         onPressed: () {
-                          // Navigation 
+                          // Add navigation or action here
                         },
                         child: Text("Next"),
                       ),
@@ -109,7 +109,7 @@ class ObjectPage extends StatelessWidget {
 
 class OptionBox extends StatelessWidget {
   final String text;
-  const OptionBox({super.key, required this.text});
+  const OptionBox({Key? key, required this.text}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

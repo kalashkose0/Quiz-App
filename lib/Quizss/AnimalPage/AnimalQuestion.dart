@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:quiz_app/pages/home.dart';
+import 'package:quiz_app/Screens/home.dart';
 
-class Sportsquestion extends StatefulWidget {
-  const Sportsquestion({super.key});
+class Animalquestion extends StatefulWidget {
+  const Animalquestion({super.key});
 
   @override
-  State<Sportsquestion> createState() => _SportsquestionState();
+  State<Animalquestion> createState() => _AnimalquestionState();
 }
 
-class _SportsquestionState extends State<Sportsquestion> {
+class _AnimalquestionState extends State<Animalquestion> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,7 +40,7 @@ class _SportsquestionState extends State<Sportsquestion> {
                   width: 90,
                 ),
                 Text(
-                  "Sports",
+                  "Animal",
                   style: TextStyle(
                       fontSize: 25,
                       color: Colors.white,
@@ -68,7 +68,7 @@ class _SportsquestionState extends State<Sportsquestion> {
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(20),
                           child: Image.asset(
-                            "assets/images/football.jpg",
+                            "assets/images/dog.png",
                             height: 240,
                             width: MediaQuery.of(context).size.width,
                             fit: BoxFit.cover,
@@ -78,19 +78,19 @@ class _SportsquestionState extends State<Sportsquestion> {
                       SizedBox(
                         height: 20,
                       ),
-                      OptionBox(text: "Volly~Ball"),
+                      OptionBox(text: "bear"),
                       SizedBox(
                         height: 20,
                       ),
-                      OptionBox(text: "Foot~Ball"),
+                      OptionBox(text: "cat"),
                       SizedBox(
                         height: 20,
                       ),
-                      OptionBox(text: "Table~Ball"),
+                      OptionBox(text: "dog"),
                       SizedBox(
                         height: 20,
                       ),
-                      OptionBox(text: "Cricket~Ball"),
+                      OptionBox(text: "deer"),
                       SizedBox(
                         height: 30,
                       ),

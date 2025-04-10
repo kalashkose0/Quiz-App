@@ -1,14 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:quiz_app/pages/home.dart';
+import 'package:quiz_app/Screens/home.dart';
 
-class Animalquestion extends StatefulWidget {
-  const Animalquestion({super.key});
+class ObjectPage extends StatelessWidget {
+  const ObjectPage({super.key});
 
-  @override
-  State<Animalquestion> createState() => _AnimalquestionState();
-}
-
-class _AnimalquestionState extends State<Animalquestion> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,7 +35,7 @@ class _AnimalquestionState extends State<Animalquestion> {
                   width: 90,
                 ),
                 Text(
-                  "Animal",
+                  "Objects",
                   style: TextStyle(
                       fontSize: 25,
                       color: Colors.white,
@@ -68,7 +63,7 @@ class _AnimalquestionState extends State<Animalquestion> {
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(20),
                           child: Image.asset(
-                            "assets/images/dog.png",
+                            "assets/images/gift-box.png",
                             height: 240,
                             width: MediaQuery.of(context).size.width,
                             fit: BoxFit.cover,
@@ -78,25 +73,25 @@ class _AnimalquestionState extends State<Animalquestion> {
                       SizedBox(
                         height: 20,
                       ),
-                      OptionBox(text: "bear"),
+                      OptionBox(text: "Box"),
                       SizedBox(
                         height: 20,
                       ),
-                      OptionBox(text: "cat"),
+                      OptionBox(text: "phone"),
                       SizedBox(
                         height: 20,
                       ),
-                      OptionBox(text: "dog"),
+                      OptionBox(text: "bottle"),
                       SizedBox(
                         height: 20,
                       ),
-                      OptionBox(text: "deer"),
+                      OptionBox(text: "cattle"),
                       SizedBox(
                         height: 30,
                       ),
                       ElevatedButton(
                         onPressed: () {
-                          // Add navigation or action here
+                          // Navigation 
                         },
                         child: Text("Next"),
                       ),
@@ -114,7 +109,7 @@ class _AnimalquestionState extends State<Animalquestion> {
 
 class OptionBox extends StatelessWidget {
   final String text;
-  const OptionBox({Key? key, required this.text}) : super(key: key);
+  const OptionBox({super.key, required this.text});
 
   @override
   Widget build(BuildContext context) {
