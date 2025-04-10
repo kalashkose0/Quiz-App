@@ -19,8 +19,7 @@ class FruitPage extends StatelessWidget {
               children: [
                 GestureDetector(
                   onTap: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => Home()));
+                    Navigator.pop(context);
                   },
                   child: CircleAvatar(
                     backgroundColor: Colors.orange,
